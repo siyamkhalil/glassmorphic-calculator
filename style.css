@@ -1,0 +1,123 @@
+/* Universal Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    padding: 20px;
+}
+
+/* Calculator Frame Box */
+.calculator-container {
+    width: 100%;
+    max-width: 360px; /* Restricts maximum width on desktop */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Screen Configuration */
+.calculator-screen {
+    margin-bottom: 20px;
+}
+
+.calculator-screen input {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: right;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+/* Responsive Responsive CSS Grid Setup */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Button UI Styling */
+.btn {
+    padding: 18px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Operator Custom Colors */
+.operator {
+    background: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+}
+
+.operator:hover {
+    background: rgba(99, 102, 241, 0.35);
+}
+
+/* Clear Button Accent */
+.clear {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+.clear:hover {
+    background: rgba(239, 68, 68, 0.35);
+}
+
+/* Grid Adjustments for Equal and Zero Layout keys */
+.equal {
+    grid-row: span 2;
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+.equal:hover {
+    background: #6366f1;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Micro-responsive tweaks for tiny mobile displays */
+@media (max-width: 340px) {
+    .calculator-container {
+        padding: 16px;
+    }
+    .btn {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+}
